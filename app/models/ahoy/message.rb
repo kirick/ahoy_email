@@ -3,5 +3,7 @@ module Ahoy
     self.table_name = "ahoy_messages"
 
     belongs_to :user, (ActiveRecord::VERSION::MAJOR >= 5 ? {optional: true} : {}).merge(polymorphic: true)
+
+    attr_accessor :request
   end
 end
